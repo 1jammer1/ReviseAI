@@ -13,7 +13,13 @@ client = Client(host=server)
 
 code = []
 
+promptindex = "please explain what this piece of code does in a simple way: "
 
+
+if foldy.endswith('/'):
+	print("this is padding so it will work")
+else:
+	foldy = foldy + "/"
 
 
 def prompt(jeff):
@@ -33,7 +39,13 @@ def index_code():
 		if match:
 			print("HEY")
 			code.append(item)
-		# makes code valid for some reason
+			with open(item, 'r') as file:
+   				contents = file.read()
+   			prompt(promptindex + contents)
+		
+		#
+		
+
 
 
 index_code()
