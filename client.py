@@ -40,8 +40,8 @@ def index_code():
 			print("HEY")
 			code.append(item)
 			with open(item, 'r') as file:
-   				contents = file.read()
-   			prompt(promptindex + contents)
+				contents = file.read()
+			prompt(promptindex + contents)
 		
 		#
 		
